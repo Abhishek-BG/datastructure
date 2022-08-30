@@ -3,25 +3,12 @@ import java.util.*;
 class Reversal {
 
     public static void reverse(int arr[], int pos) {
-        int flag, start = 0;
-        // first part
-        while (pos - 1 > start) {
-            flag = arr[start];
-            arr[start] = arr[pos - 1];
-            arr[pos - 1] = flag;
-            start++;
-        }
 
-        // second part
-        start = pos;
-        while (arr.length - 1 > pos) {
-            flag = arr[pos];
-            arr[pos] = arr[pos + 1];
-            arr[pos + 1] = flag;
-            pos++;
-        }
-        // rotate the complete array
-
+        // first half rotate
+        rotate(arr, 0, pos - 1);
+        // second half
+        rotate(arr, pos, arr.length - 1);
+        // print in reversed order to get rotated array
         for (int i = arr.length - 1; i >= 0; i--) {
             System.out.println(arr[i]);
         }
@@ -29,6 +16,14 @@ class Reversal {
 
     public static void rotate(int[] arr, int start, int end) {
 
+        while (start < end) {
+            int flag = arr[start];
+            arr[start] = arr[end];
+            arr[end] = flag;
+            start++;
+            end--;
+
+        }
     }
 
     public static void main(String[] args) {
