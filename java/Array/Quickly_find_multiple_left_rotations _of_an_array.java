@@ -51,9 +51,10 @@ class Quickly_find_multiple_left_rotations_of_an_array {
         int k = sc.nextInt();
         int karr[] = new int[k];
         for (int i = 0; i < k; i++) {
-            System.out.println("K" + (i + 1) + ":");
+            System.out.print("K" + (i + 1) + ":");
             int data = sc.nextInt();
             karr[i] = data;
+            System.out.println();
         }
         for (int i = 0; i < k; i++) {
             leftrotate(arr, size - 1, karr[i]);
