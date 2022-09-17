@@ -1,36 +1,14 @@
-"""Given a string with lowercase 
-repeated characters,the task is to rearrange characters in
-a string so that no two adjacent characters are the same
-if it is not possible to do so, then print "not possible":
-    input : aaabc
-    output : abaca
-    //
-    input : aa
-    output : not possible 
-    // 
-    input : aaaabc 
-    out : not possible
-    // 
-    input : aabc 
-    output : abac
+""" for a given array of n integers 
+and assume that '0' is a invalid number 
+and all others as a valid number , convert  the array in such a way 
+that if both current and next element is valid  and both
+have the same value then double current value  and replace
+the next number with 0, after modification rearrange the 
+array such all 0's shifted to the end
+input =  {2,2,0,4,0,8}
+output :4,4,8,0,0,0
+in = {0,2,2,2,0,6,6,0,0,8}
+op =  4,2,12,8,0,0,0,0,0,0
+
 """
 
-
-import heapq 
-from collections import Counter
-
-class Key:
-    pass 
-
-def rearrange(str:str):
-    n = len(str)
-    count = dict()
-    for i  in str:
-        count[ord(i)]= count.get(ord(i),0)+1
-    pq =[]
-    for c in range(97,123):
-        
-
-if __name__=='__main__':
-    string = "aaabc"
-    rearrange(string)
