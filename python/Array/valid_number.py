@@ -28,7 +28,6 @@ def modify(arr,n):
     for i in range(0,n-1):
         if(arr[i]!=0 ) and (arr[i]==arr[i+1]):
             arr[i]=2*arr[i]
-
             arr[i+1] =0
             i+=1
 
@@ -36,9 +35,7 @@ def modify(arr,n):
 def printA(arr,n):
     for i in range(n):
         print(arr[i],end=" ")
-
 arr = [2,2,0,4,0,8]
 n = len(arr)
-
 modify(arr,n)
 printA(arr,n)
